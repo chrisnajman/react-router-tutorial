@@ -10,6 +10,8 @@ import {
 
 import { getContacts, createContact } from "../contacts"
 
+import DeleteAllButton from "../DeleteAllButton"
+
 export async function Action() {
   const contact = await createContact()
   return redirect(`/react-router-tutorial/contacts/${contact.id}/edit`)
@@ -105,7 +107,9 @@ export default function Root() {
             </p>
           )}
         </nav>
-        <footer className="repo-link">
+        <footer className="footer">
+          <DeleteAllButton />
+
           <a
             href="https://github.com/chrisnajman/react-router-tutorial"
             target="_blank"

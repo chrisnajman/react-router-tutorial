@@ -43,6 +43,7 @@ button {
 button {
     color: #3992ff;
     font-weight: 500;
+    cursor: pointer;
 }
 
 textarea:hover,
@@ -163,11 +164,29 @@ form[action$="destroy"] button {
     background-image: none;
 }
 
-.repo-link {
+.delete-all-btn {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: #cb0e05;
+    color: white;
+}
+
+@media (hover: hover) {
+    .delete-all-btn:hover {
+        opacity: 0.8;
+    }
+}
+
+.footer {
     background-color: #121212;
     border-top: 2px solid #f44250;
-    padding: 1rem;
-    text-align: center;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
     & a {
         color: white;
         text-decoration: none;
