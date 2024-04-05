@@ -108,7 +108,7 @@ export default function Root() {
           )}
         </nav>
         <footer className="footer">
-          <DeleteAllButton />
+          {contacts.length ? <DeleteAllButton /> : null}
 
           <a
             href="https://github.com/chrisnajman/react-router-tutorial"
